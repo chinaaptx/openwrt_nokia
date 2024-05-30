@@ -11,8 +11,7 @@
 #
 
 name: OpenWrt Builder
-permissions:
-  contents: write
+
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -28,6 +27,9 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+
+permissions:
+  contents: write
 
 jobs:
   build:
